@@ -1,0 +1,71 @@
+
+    /* Additional CSS for styling the selectable options */
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        width: calc(100% - 40px); /* Adjusted width to take up full width */
+        max-width: 300px; /* Added max-width to prevent stretching too much */
+        height: 50px;
+        background-color: #007bff;
+        color: white;
+        border: 2px solid #007bff;
+        border-radius: 25px;
+        margin: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        line-height: 50px;
+        font-size: 18px;
+        box-sizing: border-box; /* Added to include padding and border in width calculation */
+    }
+
+    .option:hover {
+        background-color: #0056b3;
+    }
+
+    .selected {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    button[type="submit"] {
+        width: 150px;
+        height: 50px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #218838;
+    }
+    @media only screen and (min-width: 768px) {
+        .container {
+            max-width: 400px; /* Set max-width for larger screens */
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .option {
+            width: 90%; /* Adjusted width for smaller screens */
+        }
+    
+        button[type="submit"] {
+            width: 90%; /* Adjusted width for smaller screens */
+        }
+    }
+    

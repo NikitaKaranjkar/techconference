@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="rstyle.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Register Now</h2>
+    <form id="registration-form" action="#" method="post">
+        <div class="form-group">
+            <label for="fullname">Full Name<span>*</span>:</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email<span>*</span>:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile Number<span>*</span>:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required placeholder="Enter your mobile number">
+        </div>
+        <div class="form-group">
+            <label for="password">Password<span>*</span>:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address">
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="clearForm()">Clear</button> <!-- Clear button -->
+    </form>
+    
+    <div class="navigation-buttons">
+        <button id="back-button" onclick="window.location.href='eventdetail.html'">Back</button>
+        <button id="next-button" onclick="window.location.href='selectregistration.html'">Next</button>
+    </div>
+</div>
+
+<script>
+    function clearForm() {
+        document.getElementById("registration-form").reset();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pay Payment</title>
+    <link rel="stylesheet" href="gpay.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Google Pay Payment</h1>
+        <form id="paymentForm" class="form">
+            <div class="form-group">
+                <label for="upiId" class="label">Enter UPI ID</label>
+                <input type="text" id="upiId" class="input" placeholder="Enter UPI ID" required>
+            </div>
+            <div class="form-group">
+                <label for="amount" class="label" >Enter Amount</label>
+                <input type="number" id="amount" class="input" placeholder="Enter Amount" required>
+            </div>
+            <button type="submit" class="button">Pay with Google Pay</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cash Payment</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .payment-box {
+    text-align: center;
+  }
+  .cash-img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .payment-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Added margin to separate the button from the text */
+  }
+  .payment-button:hover {
+    background-color: #45a049;
+  }
+  .back-button, .next-button {
+    color: #4CAF50; /* Set the color of the text */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer;
+    display: inline; /* Display buttons inline */
+    margin-right: 20px; /* Added margin between buttons */
+  }
+  .back-button:hover, .next-button:hover {
+    color: #45a049; /* Change color on hover */
+  }
+  /* CSS for responsiveness */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+  
+  h1 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+  
+  .cash-img {
+    width: 100px; /* Adjusted image width for smaller screens */
+  }
+  
+  .payment-box {
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+  }
+  
+  .payment-button {
+    padding: 8px 16px; /* Adjusted padding for smaller screens */
+    font-size: 14px; /* Adjusted font size for smaller screens */
+  }
+  
+  .back-button, .next-button {
+    margin-right: 10px; /* Adjusted margin between buttons for smaller screens */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Cash Payment</h1>
+  <div class="payment-box">
+    <img src="https://www.example.com/cash-icon.png" alt="Cash" class="cash-img">
+    <p>Thank you for choosing cash payment!</p>
+    <p class="back-button" onclick="goBack()">Back</p> <!-- Back button -->
+    <a href="thanks.html">
+    <p class="next-button" >Next</p> <!-- Next button -->
+  </a>
+  </div>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+
+function goForward() {
+  window.history.forward();
+}
+</script>
+
+</body>
+</html>
+

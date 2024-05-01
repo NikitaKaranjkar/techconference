@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.upi-apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.upi-app-button {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.upi-app-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.phonepe {
+    background-color: #ffc107;
+    color: #333333;
+}
+
+.googlepay {
+    background-color: #34a853;
+    color: #ffffff;
+}
+
+.paytm {
+    background-color: #009688;
+    color: #ffffff;
+}
+
+.bhim {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.amazonpay {
+    background-color: #ff9900;
+    color: #333333;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .upi-app-button {
+        width: 80%; /* Adjusted width for smaller screens */
+        max-width: none; /* Removed max-width for smaller screens */
+    }
+}

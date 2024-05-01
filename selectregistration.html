@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Type</title>
+<link rel="stylesheet" href="rtstyle.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Select Registration Type</h2>
+    <div class="registration-options">
+        <input type="radio" id="individual" name="registrationType" value="individual">
+        <label for="individual" class="radio-label">Individual</label>
+        
+        <input type="radio" id="group" name="registrationType" value="group">
+        <label for="group" class="radio-label">Group</label>
+        
+        <div id="ticketCountField" style="display: none; margin-top: 10px;">
+            <label for="ticketCount">Number of Tickets (Max 5):</label>
+            <input type="number" id="ticketCount" name="ticketCount" min="1" max="5" value="1">
+        </div>
+        
+        <label for="ticketType" style="margin-top: 10px;">Ticket Type:</label>
+        <select id="ticketType" name="ticketType">
+            <option value="in-house">In-house Participant</option>
+            <option value="external">External Participant</option>
+        </select>
+        
+        <button onclick="window.location.href='payment.html'" style="margin-top: 20px;">Continue</button>
+    </div>
+</div>
+
+<script>
+function handleRegistration() {
+    var registrationType = document.querySelector('input[name="registrationType"]:checked').value;
+    if (registrationType === "group") {
+        var ticketCount = parseInt(document.getElementById('ticketCount').value);
+        if (ticketCount <= 0 || ticketCount > 5) {
+            alert("Please select between 1 and 5 tickets.");
+            return;
+        }
+    }
+    
+        window.location.href = 'payment.html';
+    
+}
+
+document.getElementById('group').addEventListener('click', function() {
+    document.getElementById('ticketCountField').style.display = 'block';
+});
+
+document.getElementById('individual').addEventListener('click', function() {
+    document.getElementById('ticketCountField').style.display = 'none';
+});
+</script>
+
+</body>
+</html>
